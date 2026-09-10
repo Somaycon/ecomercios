@@ -1,0 +1,15 @@
+CREATE TABLE usuarios (
+    id VARCHAR(255) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    perfil VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE produtos (
+    id VARCHAR(255) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidade_estoque INT NOT NULL,
+    ersion BIGINT NOT NULL DEFAULT 0
+);
